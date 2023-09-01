@@ -9,7 +9,7 @@ async function page() {
       {product ? product.map((pro)=>{
         return(
           <div key={product.id}>
-          <Link href={`/${pro.id}`}>{pro.title}</Link>
+          <Link href={`./${pro.id}`}>{pro.title}</Link>
         </div>
         )
       }) : 'wait'}
