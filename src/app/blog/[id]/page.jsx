@@ -9,6 +9,7 @@ return (
         {params.id} dynamic page 
       </h1>
       <h1>{product ? product.title: 'sorry '}</h1>
+      <h2>{product ? product.body: 'sorry '}</h2>
     </div>
   )
 }

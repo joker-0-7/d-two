@@ -1,9 +1,16 @@
+import Link from 'next/link'
 import React from 'react'
 
-function page() {
+async function page() {
+  const product = await fetch(`https://jsonplaceholder.typicode.com/posts`).then((res) => res.json())
   return (
     <div>
       <h1>basic static page</h1>
+      {product ? product.map((pro)=>{
+        <div>
+          <Link href={`/${pro.id}`}>{pro.title}</Link>
+        </div>
+      }) : 'wait'}
     </div>
   )
 }
