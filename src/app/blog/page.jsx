@@ -11,6 +11,7 @@ async function page() {
           <Link href={`/${pro.id}`}>{pro.title}</Link>
         </div>
       }) : 'wait'}
+      <h1> wait </h1>
     </div>
   )
 }
