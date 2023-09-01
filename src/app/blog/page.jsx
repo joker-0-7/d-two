@@ -7,9 +7,11 @@ async function page() {
     <div>
       <h1>basic static page</h1>
       {product ? product.map((pro)=>{
-        <div>
+        return(
+          <div key={product.id}>
           <Link href={`/${pro.id}`}>{pro.title}</Link>
         </div>
+        )
       }) : 'wait'}
       <h1> wait 2 </h1>
     </div>
